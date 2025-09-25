@@ -5,13 +5,31 @@
 </head>
 <body>
     <script>
-        function sum(a,b){
-            document.write(a+b);
+        function  getData(dataid,getnextdata){
+            setTimeout(()=>
+        {
+            console.log("data",dataid);
+            if(getnextdata){
+                getnextdata();
+            }
+        },2000);
         }
-        function cal(a,b,sumcallback){
-            sumcallback(a,b);
-        }
-        cal(20,40,sum);
+        getData(1,()=>{
+            getData(2,()=>{
+                getData(3,()=>{
+                    getData(4,()=>{
+
+                    });
+                });
+            });
+        });
+        // function sum(a,b){
+        //     console.log(a+b);
+        // }
+        // function cal(a,b,sumcallback){
+        //     sumcallback(a,b);
+        // }
+        // cal(20,40,sum);
     </script>
 </body>
 </html>
