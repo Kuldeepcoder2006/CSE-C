@@ -1,0 +1,9 @@
+#book{
+    height: 320px;
+    width: 250px;
+    background-color: rgb(236, 233, 233);
+    color: black;
+    box-shadow: 2px 2px 2px  grey;
+    border: solid 1px black;
+    margin: 20px;
+}
